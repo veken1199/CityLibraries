@@ -20,11 +20,11 @@ def crawl(keyword, resutls):
     html_tree = html.fromstring(page.content)
     parsed_html_tree = html_tree.xpath('//*[@id="mainContentArea"]')
 
-    data = []
+    response = []
 
     # getting the first element
     if len(parsed_html_tree[0]):
-        data.append({
+        response.append({
             'title': ''.join((parsed_html_tree[0][0].xpath(xpath_title_first))).strip(),
             'author': ''.join((parsed_html_tree[0][0].xpath(xpath_author_first))).strip()
         })
@@ -39,8 +39,6 @@ def crawl(keyword, resutls):
                 author = (parsed_html_tree[0][i].xpath(xpath_author_no_link))
             author = ''.join(author).strip()
 
-            data.append(json.dumps({'author': author, 'title': title}))
-            print(i, '-', title, ': ', author, ': ')
+            response.append({'author': author, 'title': title})
 
-    print(data)
-    resutls.append({'concordia': data})
+    resutls.append({'concordia': response})
