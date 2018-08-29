@@ -1,9 +1,9 @@
 // index.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App'
+import AppHeader from './components/AppHeader';
 
 ReactDOM.render(
-  <App state ={open=true}/>,
+  <AppHeader state ={open=true}/>,
   document.getElementById('content')
 );

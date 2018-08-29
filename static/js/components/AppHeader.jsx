@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Menu } from 'semantic-ui-react'
 
-export default class MenuExampleHeader extends Component {
+export default class AppHeader extends Component {
   constructor() {
     super()
     this.state = {}
