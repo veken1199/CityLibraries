@@ -1,5 +1,6 @@
 import React,  { Component }from 'react'
 import { Container,  Grid, Segment } from 'semantic-ui-react'
+import SchoolSearchResults from './SchoolSearchResults'
 
 export default class SearchResultsComponent extends Component {
       constructor() {
@@ -7,24 +8,23 @@ export default class SearchResultsComponent extends Component {
             this.state = {}
       }
 
-      queryUpdateHandler(newQeury) {
-            console.log(newQuery);
-      }
-
       render() {
+            let queryData = this.props.queryData
+
             return (
-            <Container>
-                  <Grid columns='equal'>
-                        <Grid.Row>
-                              <Grid.Column>
-                                    <Segment>1</Segment>
-                              </Grid.Column>
-                              <Grid.Column>
-                                    <Segment>2</Segment>
-                              </Grid.Column>
-                        </Grid.Row>
-                  </Grid>
-            </Container>
+                  <Container>
+                        <Grid columns='equal'>
+                              <Grid.Row>
+                                    { queryData.map((row, index) => {
+                                    return <SchoolSearchResults 
+                                                key = { index } 
+                                                schoolName = { row['uni'] }
+                                                data = { row['data'] }>
+                                          </SchoolSearchResults> 
+                                    })}
+                              </Grid.Row>
+                        </Grid>
+                  </Container>
             )
       }
 }

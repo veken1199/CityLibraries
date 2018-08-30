@@ -27,7 +27,8 @@ def crawl(keyword, results):
                          'author': author,
                          'publisher': publisher})
 
-    results.append({'uqam': response})
+    results.append({'uni': 'uqam',
+                    'data': response})
     return results
 
 

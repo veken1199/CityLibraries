@@ -41,4 +41,5 @@ def crawl(keyword, resutls):
 
             response.append({'author': author, 'title': title})
 
-    resutls.append({'concordia': response})
+    resutls.append({'uni': 'concordia',
+                    'data': response})

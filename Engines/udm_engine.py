@@ -15,4 +15,5 @@ def crawl(keyword, results):
         response.append({'date': ''.join(record_data.get('creationdate', '')),
                          'title': ''.join(record_data.get('title', '')),
                          'author': ''.join(record_data.get('author', ''))})
-    results.append({'udm': response})
+    results.append({'uni': 'udm',
+                    'data': response})

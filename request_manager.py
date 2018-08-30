@@ -10,7 +10,7 @@ class RequestsManager():
 
     def init_thread_pool(self, keyword):
         for library_name, crawler in engine_mapper.engine_map.items():
-            thread = Thread(target=crawler, args=[keyword ,self.results])
+            thread = Thread(target=crawler, args=[keyword, self.results])
             self.thread_pool.append(thread)
             thread.start()
 
@@ -18,5 +18,4 @@ class RequestsManager():
             thread.join()
 
         return self.results
-
 

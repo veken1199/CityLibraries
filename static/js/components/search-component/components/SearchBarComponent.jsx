@@ -8,16 +8,14 @@ export default class SearchBarComponent extends Component {
             this.state = {}
       }
 
-      submitSearchQuery(query:String) {
-            console.log(query); 
-      }
-      
       render() {
-            let queryHandlerFunc = this.props.queryHandler;
-            let inputVal; 
+            let queryHandlerFunc = this.props.queryHandler
+            let isLoadingQuery = this.props.isLoadingQuery
+            let inputVal
+            
             return (
                   < Segment >  
-                        < Input fluid 
+                        < Input fluid loading={isLoadingQuery} iconPosition='left'
                               action =  {{color:'teal', icon:'search', onClick:e => queryHandlerFunc(inputVal)}}
                               placeholder = 'Insert the title of the book'
                               onChange =  {e => {inputVal = e.target.value}}/> 
