@@ -15,7 +15,7 @@ export default class SearchContainer extends Component {
 
       queryHandler(query:String){
             this.setState({isLoadingQuery: true})
-            axios.get('http://localhost:8082')
+            axios.get('http://localhost:8082/query/' + query)
             .then((response) => {
                   console.log(response)
                   this.setState({queryData: response.data})

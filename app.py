@@ -6,10 +6,10 @@ import json
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/', methods=['GET', 'OPTIONS'])
-def hello_world():
+@app.route('/query/<query>', methods=['GET', 'OPTIONS'])
+def find_book(query):
     request_manager = RequestsManager()
-    return json.dumps(request_manager.init_thread_pool('calculus'))
+    return json.dumps(request_manager.init_thread_pool(query))
 
 @app.route('/log')
 def log():
