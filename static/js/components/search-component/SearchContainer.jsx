@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React,  { Component } from 'react'
-import {Container }from 'semantic-ui-react'
+import {Container, Sticky }from 'semantic-ui-react'
 import {Input, Segment, Button, Dimmer, Loader }from 'semantic-ui-react'
 import SearchBarComponent from './components/SearchBarComponent'
 import SearchResultsComponent from './components/SearchResultsComponent'
@@ -28,13 +28,15 @@ export default class SearchContainer extends Component {
 
       render() {
             return ( 
-                  <Container >  
-                        < SearchBarComponent 
+                  <Container>  
+                        <SearchBarComponent 
+                              queryData = { this.state.queryData }
                               queryHandler =  { this.queryHandler }
                               isLoadingQuery = { this.state.isLoadingQuery }>
                         </SearchBarComponent> 
-                        < SearchResultsComponent queryData = { this.state.queryData } />
-                  </Container > 
+                        <br/>
+                        <SearchResultsComponent queryData = { this.state.queryData } />
+                  </Container> 
             )
       }
 }

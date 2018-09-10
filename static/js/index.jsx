@@ -8,9 +8,7 @@ ReactDOM.render(
   <div>
     <AppHeader state ={open=true}/>
     <SearchContainer />
-  </div>
-  , document.getElementById('content')
-);
+  </div>, document.getElementById('content'));
 
 function handler(tsx) {
   console.log(tsx);
