@@ -14,7 +14,7 @@ export default class SchoolSearchResultsComponent extends Component {
             let schoolName = this.props.schoolName
             
             return (
-                  <Grid.Column width="5">   
+                  <Grid.Column>   
                         <Label as='a' color='red' ribbon id={schoolName}>
                               {schoolName}
                         </Label>

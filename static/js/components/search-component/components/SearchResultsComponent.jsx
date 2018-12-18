@@ -13,7 +13,7 @@ export default class SearchResultsComponent extends Component {
             let queryData = this.props.queryData
             return ( 
                   <Container>
-                        <Grid columns='equal' divided padded celled>
+                        <Grid columns='3' divided padded celled>
                               <Grid.Row>
                                     {queryData.map((obj, index) => {
                                     return <SchoolSearchResultsComponent 

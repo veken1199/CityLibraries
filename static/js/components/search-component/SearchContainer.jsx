@@ -35,7 +35,13 @@ export default class SearchContainer extends Component {
                               isLoadingQuery = { this.state.isLoadingQuery }>
                         </SearchBarComponent> 
                         <br/>
-                        <SearchResultsComponent queryData = { this.state.queryData } />
+                        <Container fluid>
+                              <Loader active = {this.state.isLoadingQuery}></Loader>
+                        </Container>
+                        
+                        <Dimmer.Dimmable as={Segment} blurring dimmed={this.state.isLoadingQuery}>
+                              <SearchResultsComponent queryData = { this.state.queryData } />
+                        </Dimmer.Dimmable>
                   </Container> 
             )
       }
