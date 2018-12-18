@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8a67431-f0ec-4167-b9c0-2e9fa5d7fb67" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Engines/engine_config.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/engines/mcgill_engine.py" afterPath="$PROJECT_DIR$/mcgill_engine.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/engine_mapper.py" afterPath="$PROJECT_DIR$/engine_mapper.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,20 +60,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="engine_mapper.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="engine_mapper.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/engine_mapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="udm_engine.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines/udm_engine.py">
+        <entry file="file://$PROJECT_DIR$/Crawlers/udm_engine.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
               <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="9" />
@@ -86,18 +82,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="10" />
+            <state relative-caret-position="22">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="mcgill_engine.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mcgill_engine.py">
+        <entry file="file://$PROJECT_DIR$/Crawlers/mcgill_engine.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
               <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
@@ -119,7 +115,7 @@
         </entry>
       </file>
       <file leaf-file-name="concordia_engine.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines/concordia_engine.py">
+        <entry file="file://$PROJECT_DIR$/Crawlers/concordia_engine.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -129,7 +125,7 @@
         </entry>
       </file>
       <file leaf-file-name="uqam_engine.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/engines/uqam_engine.py">
+        <entry file="file://$PROJECT_DIR$/Crawlers/uqam_engine.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="748">
               <caret line="35" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
@@ -172,6 +168,7 @@
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/request_manager.py" />
         <option value="$PROJECT_DIR$/engine_mapper.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -229,7 +226,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="engines" />
+              <option name="myItemId" value="Crawlers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -247,6 +244,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BABO99\Documents\GitHub\CityLibrareis\CityLibrariseServer\Crawlers" />
       <recent name="C:\Users\BABO99\Documents\GitHub\CityLibrareis\CityLibrariseServer" />
     </key>
   </component>
@@ -574,7 +572,28 @@
       <option name="project" value="LOCAL" />
       <updated>1545106278130</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="There is an issue with git reading engines as Engines :(">
+      <created>1545106953470</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545106953470</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added mcgill engine to Crawlers  folder">
+      <created>1545107067927</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545107067927</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated .gitignore &#10;">
+      <created>1545107213010</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1545107213010</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -671,7 +690,10 @@
     <MESSAGE value="Added uqam engine" />
     <MESSAGE value="Added udm engine" />
     <MESSAGE value="Integrated search Components into the app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integrated search Components into the app" />
+    <MESSAGE value="There is an issue with git reading engines as Engines :(" />
+    <MESSAGE value="Added mcgill engine to Crawlers  folder" />
+    <MESSAGE value="Updated .gitignore &#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore &#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -682,27 +704,27 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mcgill_engine.py</url>
+          <url>file://$PROJECT_DIR$/Crawlers/mcgill_engine.py</url>
           <line>14</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mcgill_engine.py</url>
+          <url>file://$PROJECT_DIR$/Crawlers/mcgill_engine.py</url>
           <line>11</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mcgill_engine.py</url>
+          <url>file://$PROJECT_DIR$/Crawlers/mcgill_engine.py</url>
           <line>12</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mcgill_engine.py</url>
+          <url>file://$PROJECT_DIR$/Crawlers/mcgill_engine.py</url>
           <line>15</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mcgill_engine.py</url>
+          <url>file://$PROJECT_DIR$/Crawlers/mcgill_engine.py</url>
           <line>18</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
@@ -716,13 +738,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/udm_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/udm_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
@@ -748,7 +768,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/concordia_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/concordia_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
@@ -756,7 +776,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/uqam_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/uqam_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -805,13 +825,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/udm_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/udm_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
@@ -837,7 +855,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/concordia_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/concordia_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="20" column="38" lean-forward="false" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
@@ -845,7 +863,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/uqam_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/uqam_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -894,13 +912,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/udm_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/udm_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
@@ -926,7 +942,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/concordia_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/concordia_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -934,7 +950,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/uqam_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/uqam_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
@@ -983,13 +999,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/udm_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/udm_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
@@ -1015,7 +1029,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/concordia_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/concordia_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="15" />
@@ -1023,7 +1037,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/uqam_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/uqam_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
@@ -1069,7 +1083,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/uqam_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/uqam_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="35" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
@@ -1079,7 +1093,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/concordia_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/concordia_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -1126,7 +1140,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/engines/udm_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/udm_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
           <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="9" />
@@ -1136,15 +1150,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mcgill_engine.py">
+    <entry file="file://$PROJECT_DIR$/Crawlers/mcgill_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
@@ -1156,11 +1162,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/engine_mapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="198">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
