@@ -1,5 +1,5 @@
 import mcgill_engine
-from engines import concordia_engine, uqam_engine, udm_engine
+from Crawlers import concordia_engine, uqam_engine, udm_engine
 
 engine_map = {
     'concordia': concordia_engine.crawl,
