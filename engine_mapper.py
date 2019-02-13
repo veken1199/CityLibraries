@@ -1,4 +1,5 @@
-from engines import concordia_engine, udm_engine, uqam_engine, udm_engine, mcgill_engine
+from crawlers import concordia_engine, uqam_engine, udm_engine, mcgill_engine
+
 engine_map = {
     'concordia': concordia_engine.crawl,
     'uqam' : uqam_engine.crawl,

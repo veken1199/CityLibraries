@@ -1,6 +1,6 @@
 import React,  { Component } from 'react'
 import {Container }from 'semantic-ui-react'
-import {Input, Segment, Button } from 'semantic-ui-react'
+import {Input, Segment, Button, Loader } from 'semantic-ui-react'
 import UnversitiesDropdownComponent from './UniversitiesDropdownComponent'
 
 
@@ -17,10 +17,9 @@ export default class SearchBarComponent extends Component {
             let inputVal
             
             return ( 
-                  <Input fluid loading={isLoadingQuery}
+                  <Input fluid
                         placeholder = 'Insert the title of the book'
-                        onChange =  {e => {inputVal = e.target.value}}
-                        action>
+                        onChange =  {e => {inputVal = e.target.value}}>
                   <input />
                         <Button type='submit' icon='search' onClick = {e => queryHandlerFunc(inputVal)} />
                         <UnversitiesDropdownComponent universities = {queryData.map(obj=>obj.uni)} />
