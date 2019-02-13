@@ -1,6 +1,8 @@
-#CityLibraries
-Simple web application build in Python flask and React to allow students search in multiple
-libraries at the same time.
+# CityLibraries
+Simple web application build in Python flask and React to allow students search multiple
+libraries at once.
+
+![untitled](https://user-images.githubusercontent.com/15069757/52685848-4338e200-2f19-11e9-951f-a7d7db797109.gif)
 
 ## Install python dependencies:
 ```sh
