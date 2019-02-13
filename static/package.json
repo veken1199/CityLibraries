@@ -39,18 +39,18 @@
     "eslint-plugin-babel": "~4.0.1",
     "eslint-plugin-react": "^6.9.0",
     "faker": "^4.1.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.11",
     "postcss-cssnext": "^2.9.0",
     "postcss-each": "^0.9.3",
     "postcss-import": "^9.1.0",
     "postcss-loader": "^1.2.2",
     "postcss-mixins": "^5.4.1",
     "react-hot-loader": "^3.0.0-beta.6",
-    "redux": "^4.0.0",
+    "redux": "^4.0.1",
     "redux-devtools-extension": "^1.0.0",
-    "semantic-ui-react": "^0.82.0",
+    "semantic-ui-react": "^0.82.5",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack-dev-server": "^2.11.3"
   }
 }
