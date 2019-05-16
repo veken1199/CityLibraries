@@ -1,31 +1,29 @@
-import React,  { Component } from 'react'
-import {Container }from 'semantic-ui-react'
-import {Input, Segment, Button, Loader } from 'semantic-ui-react'
-import UnversitiesDropdownComponent from './UniversitiesDropdownComponent'
-
+import React, {Component} from 'react'
+import {Input, Button, Container} from 'semantic-ui-react'
 
 export default class SearchBarComponent extends Component {
-      constructor() {
-            super()
-            this.state = {}
-      }
+    constructor() {
+        super()
+        this.state = {}
+    }
 
-      render() {
-            let queryHandlerFunc = this.props.queryHandler
-            let isLoadingQuery = this.props.isLoadingQuery
-            let queryData = this.props.queryData
-            let inputVal
-            
-            return ( 
-                  <Input fluid
-                        placeholder = 'Insert the title of the book'
-                        onChange =  {e => {inputVal = e.target.value}}>
-                  <input />
-                        <Button type='submit' icon='search' onClick = {e => queryHandlerFunc(inputVal)} />
-                        <UnversitiesDropdownComponent universities = {queryData.map(obj=>obj.uni)} />
-                  </Input >
-            )
-      }
+    render() {
+        let queryHandlerCallback = this.props.queryHandler
+        let inputVal
+
+        return (
+            <Container textAlign={"left"} style={{width:"80%", float: "left"}}>
+                <Input fluid
+                       placeholder='Insert the title of the book'
+                       onChange={e => {
+                           inputVal = e.target.value
+                       }}>
+                    <input />
+                    <Button type='submit' icon='search' onClick={e => queryHandlerCallback(inputVal)}/>
+                </Input >
+            </Container>
+        )
+    }
 }
 
 

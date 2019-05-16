@@ -1,14 +1,12 @@
 // index.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppHeader from './components/AppHeader';
-import SearchContainer from './components/search-component/SearchContainer';
+import { App } from './components/App'
 
 ReactDOM.render(
   <div>
-    <AppHeader state ={open=true}/>
-    <SearchContainer />
-  </div>, document.getElementById('content'));
+    <App />
+  </div>, document.getElementById('root'));
 
 function handler(tsx) {
   console.log(tsx);
