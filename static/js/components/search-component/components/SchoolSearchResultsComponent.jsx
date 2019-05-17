@@ -1,12 +1,15 @@
 import React, {Component}from 'react'
-import {Container, Grid, Label, Card, Image} from 'semantic-ui-react'
+import {Container, Grid, Segment, Label, Card, Button, Image, Sticky} from 'semantic-ui-react'
 
 export default class SchoolSearchResultsComponent extends Component {
     constructor() {
         super()
+        this.state = {}
+        this.handleContextRef = contextRef => this.setState({contextRef})
     }
 
     render() {
+        const {contextRef} = this.state
         let data = this.props.data
         let schoolName = this.props.schoolName
 
@@ -16,8 +19,11 @@ export default class SchoolSearchResultsComponent extends Component {
                     {schoolName}
                 </Label>
 
-                <Container style={{overflowY: 'scroll', maxHeight: '75%'}}>
-                    {data.map((row, index) => ResultCard(row['title'], row['author'], index))}
+                <Container style={{overflowY: 'scroll', maxHeight: Math.round(window.innerWidth * 0.3)}}
+                           ref={this.handleContextRef}>
+                    {data.map((row, index) => {
+                        return ResultCard(row['title'], row['author'], index)
+                    })}
                 </Container>
             </Grid.Column>
         )

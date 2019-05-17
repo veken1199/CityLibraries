@@ -19,9 +19,9 @@ export default class UnversitiesDropdownComponent extends Component {
                             key={index}>{university}
                         </Dropdown.Item>
                     })}
-                     onChange={e => {
-                           inputVal = e.target.value
-                       }}
+                    onChange={e => {
+                        inputVal = e.target.value
+                    }}
             >
             </Select>
         )
