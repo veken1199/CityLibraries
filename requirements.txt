@@ -8,5 +8,4 @@ short_url
 sqlalchemy_utils
 redis
 flask_testing
-mock
-unittest
+mockg
