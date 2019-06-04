@@ -10,25 +10,35 @@ import UnversitiesDropdownComponent from './components/UniversitiesDropdownCompo
 export default class SearchComponent extends Component {
     constructor() {
         super()
-        this.state = {queryData: [], isQueryLoading: false}
+        this.state = {queryData: [], isQueryLoading: false, cities: []}
         this.queryHandler = this.queryHandler.bind(this)
     }
 
-    async queryHandler(query) {
+    componentDidMount() {
+        this.fetchCities()
+    }
+
+    async fetchCities(){
+        const res = await get(`/cities`)
+        res.data && this.setState({cities : res.data})
+    }
+
+    async queryHandler(query, city) {
         this.setState({isQueryLoading: true})
-        const res = await get('/query/' + query)
-        this.setState({isQueryLoading: false, queryData: res})
+        const res = await get(`/query?query=${query}&city=${city}`)
+        this.setState({isQueryLoading: false, queryData: res.data || []})
     }
 
     render() {
         return (
             <Container>
                 <SearchBarComponent
+                    cities = {this.state.cities}
                     queryHandler={ this.queryHandler }
                 />
 
                 <UnversitiesDropdownComponent
-                    universities={this.state.queryData.map(obj => obj.uni)}/>
+                    universities={this.state.queryData.map(obj => obj.university_name)}/>
                 <br/>
 
                 <Container fluid>
@@ -36,7 +46,7 @@ export default class SearchComponent extends Component {
                 </Container>
 
                 <Dimmer.Dimmable as={Segment} blurring dimmed={this.state.isQueryLoading}>
-                    <SearchResultsComponent queryData={this.state.queryData}/>
+                    <SearchResultsComponent queryRespData={this.state.queryData}/>
                 </Dimmer.Dimmable>
             </Container>
         )

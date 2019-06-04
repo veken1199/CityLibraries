@@ -1,15 +1,13 @@
-import React, {Component}from 'react'
-import {Container, Grid, Segment, Label, Card, Button, Image, Sticky} from 'semantic-ui-react'
+import React, {Component} from "react";
+import {Container, Grid, Label, Card, Image} from "semantic-ui-react";
 
 export default class SchoolSearchResultsComponent extends Component {
     constructor() {
         super()
         this.state = {}
-        this.handleContextRef = contextRef => this.setState({contextRef})
     }
 
     render() {
-        const {contextRef} = this.state
         let data = this.props.data
         let schoolName = this.props.schoolName
 
@@ -19,10 +17,9 @@ export default class SchoolSearchResultsComponent extends Component {
                     {schoolName}
                 </Label>
 
-                <Container style={{overflowY: 'scroll', maxHeight: Math.round(window.innerWidth * 0.3)}}
-                           ref={this.handleContextRef}>
+                <Container style={{overflowY: 'scroll', maxHeight: Math.round(window.innerWidth * 0.3)}}>
                     {data.map((row, index) => {
-                        return ResultCard(row['title'], row['author'], index)
+                        return ResultCard(row, index)
                     })}
                 </Container>
             </Grid.Column>
@@ -30,14 +27,16 @@ export default class SchoolSearchResultsComponent extends Component {
     }
 }
 
-const ResultCard = (title, author, key) => (
-    <Card raised key={key} href="http://google.com">
+const ResultCard = (row, key) => (
+    <Card raised key={key} href={row.link} target={"_blank"}>
         <Card.Content>
+            { row.link &&
             <Image floated='right' size='mini'
-                   src='http://elektrenumm.lt/wp-content/uploads/2015/03/book_no_cover.jpg'/>
-            <Card.Header>{title || "Missing title"}</Card.Header>
+                   src='https://cdn4.iconfinder.com/data/icons/internet-seo-and-online-activity/400/Internet_online_world_wide_web_globe_network-512.png'/>
+            }
+            <Card.Header>{row.title || "Missing title"}</Card.Header>
             <Card.Meta>Book</Card.Meta>
-            <Card.Description>{author || "Missing author"}</Card.Description>
+            <Card.Description>{row.author || "Missing author"}</Card.Description>
         </Card.Content>
     </Card>
 )

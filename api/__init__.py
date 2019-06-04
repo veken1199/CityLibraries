@@ -1,0 +1,3 @@
+from .cities_handler import cities_handler_blueprint
+from .image_handler import image_handler_blueprint
+from .query_handler import query_handler_blueprint
