@@ -236,3 +236,6 @@ typings/
 
 **/data_repository/**
 **/image_repository/**
+
+!data_repository/.gitkeep
+!image_repository/.gitkeep
