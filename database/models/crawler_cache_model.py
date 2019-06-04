@@ -54,6 +54,7 @@ class CrawlerCacheModel(db.Model):
                     db.session.commit()
                     return response
 
+                # it seems that our query was cached, we will directly return it
                 return cached_response.content
 
             except Exception as e:
