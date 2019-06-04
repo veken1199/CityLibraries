@@ -2,8 +2,6 @@ from database import db
 
 # reset the db
 def reset_db():
-    # Creating app context
-    print('Creating flask app context...')
 
     # Deleting up the databasae
     print("Deleting the database...")

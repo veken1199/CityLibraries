@@ -19,20 +19,19 @@ class ImageModel(db.Model):
     description = Column(String, default="")
     added_on = Column(DateTime, nullable=False, default=datetime.utcnow)
 
-
     def self_assign_short_url(self):
         """
-        Function to assign a calling object/record with a short url
-        based on it own record id. It will return short url
+        Method to assign the calling object/record with a short url
+        based on its own record id. It will return short url
         :return: str : short url
         """
-        self.image_short_url = short_url.encode_url(self.id, 10)
+        self.image_short_url = short_url.encode_url(self.id)
         return self.image_short_url
 
     @staticmethod
     def get_row_id_for_short_url(url):
         """
-        Small function to get the id from a short url, if the short url
+        Function to get the id from a short url, if the short url
         is not correct, short_url will throw error and we will have to
         catch and return -1
         :param url:
@@ -45,7 +44,13 @@ class ImageModel(db.Model):
 
     @staticmethod
     def get_all_images(page):
-        expiry_date = datetime.utcnow() - timedelta(weeks=1)
+        """
+        Function to filter and return sorted images from the database. It will also
+        return the number of the next page and the number of the total pages in the db
+        :param page:
+        :return: Images: ImageModel, next page: num, pages: num
+        """
+        expiry_date = datetime.utcnow() - timedelta(days=constants.IMAGE_DURATION_IN_DAYS)
         records = ImageModel.query \
             .filter(ImageModel.added_on > expiry_date) \
             .order_by(desc(ImageModel.added_on)) \
@@ -54,15 +59,19 @@ class ImageModel(db.Model):
 
     def create_posted_on_property(self):
         """
-        Function that adds a new property on the record to hold the
-        date this record was created. The function will basically parse
-        the date value from self.addedon column
-        :return:
+        Method that adds a new property on the record to hold the
+        date this record was created on. The function will basically parse
+        the date value from self.added_on column
+        :return: None
         """
         self.posted_on = self.added_on.date
 
-
     @staticmethod
     def get_image_by_id(id):
+        """
+        Function to filter record by id
+        :param id:
+        :return:
+        """
         return ImageModel.query.filter(ImageModel.id == id) \
             .first()

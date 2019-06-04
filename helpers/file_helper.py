@@ -8,10 +8,11 @@ def is_allowed_file_extension(filename):
     """
     Function used to check if the file extension is one of the allowed extensions
     :param filename:str
-    :return: Boolean
+    :return: boolean
     """
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in constants.ALLOWED_EXTENSIONS
+
 
 def generate_secret_filename_for(filename):
     """
@@ -20,13 +21,14 @@ def generate_secret_filename_for(filename):
     :param filename:
     :return: str: New filename
     """
-    secret = os.urandom(24).hex()
+    secret = os.urandom(constants.FILENAME_SECRET_LENGTH).hex()
     return secret + filename
+
 
 def generate_todays_date_folder():
     """
-    function check and creates if does not exist a folder of today's date
-    and returns todays date folder directory
+    Function to check and create if does not exist a folder of today's date
+    and returns today's date folder directory
     :return: str
     """
     todays_date = datetime.today().date()

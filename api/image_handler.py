@@ -8,6 +8,7 @@ from database import ImageModel, db
 from helpers import generate_secret_filename_for, is_allowed_file_extension, \
     generate_todays_date_folder
 from .schema import ImageSchema
+import constants
 
 image_blueprint_name = 'image handler'
 image_handler_blueprint = Blueprint(image_blueprint_name, __name__, url_prefix='/image')
@@ -18,8 +19,11 @@ def handle_image_uploading():
     if not request.files or not request.files['file']:
         return ApiResponse(message="File is missing", has_error=True).send()
 
-    if not request.form['title']:
-        return ApiResponse(message="Title is missing", has_error=True).send()
+    if not request.form['title'] or len(request.form['title']) > constants.IMAGE_TITLE_MAX_LENGTH:
+        return ApiResponse(message="Title is invalid", has_error=True).send()
+
+    if request.form['description'] and len(request.form['description']) > constants.IMAGE_DESCRIPTION_MAX_LENGTH:
+        return ApiResponse(message="Description is invalid", has_error=True).send()
 
     # read the file and prepare a filename
     file = request.files['file']
@@ -76,8 +80,11 @@ def load_image(short_url):
         # Get the id of the image from short_url
         id = ImageModel.get_row_id_for_short_url(short_url)
         image = ImageModel.get_image_by_id(id)
-        ImageUrlCacheManager.cache_image_short_url(image)
-        image_full_path = os.path.join(image.storage_full_dir, image.image_filename)
+        if image:
+            ImageUrlCacheManager.cache_image_short_url(image)
+            image_full_path = os.path.join(image.storage_full_dir, image.image_filename)
+        else:
+            return ApiResponse(message="Image not found", has_error=True).send()
 
     if os.path.isfile(image_full_path):
         return send_file(image_full_path)
