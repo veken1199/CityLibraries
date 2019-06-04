@@ -53,7 +53,7 @@ class ImageUrlCacheManager(CacheManager):
     @classmethod
     def get_image_full_path(cls, image_short_url):
         """
-        Helper function to get image full path. It will return None if the
+        Helper function to get image full path. It will return None the
         value was not found or in case the cache failed
         :param image_short_url:
         :return: Object or None

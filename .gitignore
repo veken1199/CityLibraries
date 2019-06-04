@@ -234,5 +234,5 @@ typings/
 # Serverless directories
 .serverless
 
-**/data_repository
-**/image_repository
+**/data_repository/*
+**/image_repository/*

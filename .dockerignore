@@ -1,4 +1,4 @@
 **/node_modules
-**/data_repository
-**/image_repository
+**/data_repository/*
+**/image_repository/*
 

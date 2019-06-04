@@ -76,8 +76,11 @@ def load_image(short_url):
         # Get the id of the image from short_url
         id = ImageModel.get_row_id_for_short_url(short_url)
         image = ImageModel.get_image_by_id(id)
-        ImageUrlCacheManager.cache_image_short_url(image)
-        image_full_path = os.path.join(image.storage_full_dir, image.image_filename)
+        if image:
+            ImageUrlCacheManager.cache_image_short_url(image)
+            image_full_path = os.path.join(image.storage_full_dir, image.image_filename)
+        else:
+            return ApiResponse(message="Image not found", has_error=True).send()
 
     if os.path.isfile(image_full_path):
         return send_file(image_full_path)

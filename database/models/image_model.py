@@ -26,7 +26,7 @@ class ImageModel(db.Model):
         based on it own record id. It will return short url
         :return: str : short url
         """
-        self.image_short_url = short_url.encode_url(self.id, 10)
+        self.image_short_url = short_url.encode_url(self.id)
         return self.image_short_url
 
     @staticmethod
