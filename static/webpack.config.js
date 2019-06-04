@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+
 const config = {
     entry:  __dirname + '/js/index.jsx',
     output: {
@@ -6,7 +7,7 @@ const config = {
         filename: 'bundle.js',
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.css']
+        extensions: ['.js', '.jsx']
     },
     module: {
       rules: [
@@ -14,22 +15,6 @@ const config = {
               test: /\.jsx?/,
               exclude: /node_modules/,
               use: 'babel-loader'
-          },
-          {
-            test: /\.css$/,
-            use: [
-              "style-loader",
-              {
-                loader: "css-loader",
-                options: {
-                  modules: true, // default is false
-                  sourceMap: true,
-                  importLoaders: 1,
-                  localIdentName: "[name]--[local]--[hash:base64:8]"
-                }
-              },
-              "postcss-loader"
-            ]
           },
       ]}
 };
