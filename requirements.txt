@@ -9,3 +9,4 @@ sqlalchemy_utils
 redis
 flask_testing
 mock
+unittest
