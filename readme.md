@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/veken1199/CityLibraries.svg?style=svg)](https://circleci.com/gh/veken1199/CityLibraries)
 
 #CityLibraries
 Simple web application build in Python flask and React to allow students search in multiple
